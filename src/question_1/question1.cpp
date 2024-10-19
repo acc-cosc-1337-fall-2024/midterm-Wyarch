@@ -7,27 +7,29 @@ bool test_config()
 
 string decimal_to_binary(int num)
 {
-    vector<int> binaryChart = {128,64,32,16,8,4,2,1};
-    vector<string> binaryVector = {"0","0","0","0","0","0","0","0"};
-    int markNum;
+    int remainderNum;
+    string processingBinary;
+    string returnBinary;
 
-    for(int i = 0; i <= binaryVector.size(); i++)
+    for(int i = 0; i <= 7; i++)
     {
-        if(num < binaryChart[i])
+        remainderNum = num % 2;
+        num = num/2;
+        
+        if(remainderNum == 1)
         {
-            binaryVector[i] = "0";
+            processingBinary += "1";
         }
         else
         {
-            for(int c = i + 1; c <= binaryVector.size(); c++)
-            {
-                if(binaryChart[i] + binaryChart [c] == num)
-                {
-                    binaryVector[i] = 
-                }
-            }
+            processingBinary += "0";
         }
     }
 
-    return ;
+    for(int c = processingBinary.size(); c >= 0; c--)
+    {
+        returnBinary += processingBinary[c];
+    }
+    
+    return returnBinary;
 }

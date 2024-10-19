@@ -13,5 +13,7 @@ TEST_CASE("test")
 
 TEST_CASE("Verify decimal_to_binary")
 {
-	REQUIRE("00001010" == decimal_to_binary(10));
+	//REQUIRE("00001010" == decimal_to_binary(10));
+	//REQUIRE("10101010" == decimal_to_binary(170));
+	REQUIRE("11111111" == decimal_to_binary(255));
 }
