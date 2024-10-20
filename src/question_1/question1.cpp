@@ -26,7 +26,7 @@ string decimal_to_binary(int num)
         }
     }
 
-    for(int c = processingBinary.size(); c >= 0; c--)
+    for(int c = processingBinary.size() - 1; c >= 0; c--)
     {
         returnBinary += processingBinary[c];
     }
